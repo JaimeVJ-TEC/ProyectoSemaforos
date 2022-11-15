@@ -175,6 +175,7 @@ public class Timer : MonoBehaviour
                 break;
 
             case EstadoOpcion.Apagado:
+                vertical = true;
                 TiempoPasoMedioSegundo = 0;
                 halfSecond = 0.5f;
                 EstadoS = EstadoSemaforos.SemaforosVyH;

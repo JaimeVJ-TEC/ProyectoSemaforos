@@ -86,9 +86,21 @@ public class Semaforo : MonoBehaviour
                 }
                 else
                 {
-                    Verde.color = Color.black;
-                    Amarillo.color = Color.black;
-                    Rojo.color = Color.red;
+                    if (UltimoEstado == Timer.EstadoTimer.Rojo && timer.Estado == Timer.EstadoTimer.Apagado)
+                    {
+                        Verde.color = Color.black;
+                        Amarillo.color = Color.black;
+                        Rojo.color = Color.black;
+                    }
+                    else
+                    {
+                        Verde.color = Color.black;
+                        Amarillo.color = Color.black;
+                        Rojo.color = Color.red;
+                    }
+
+                    if (timer.Estado != Timer.EstadoTimer.Apagado)
+                        UltimoEstado = timer.Estado;
                 }
                 break;
 
@@ -139,9 +151,21 @@ public class Semaforo : MonoBehaviour
                 }
                 else
                 {
-                    Verde.color = Color.black;
-                    Amarillo.color = Color.black;
-                    Rojo.color = Color.red;
+                    if (UltimoEstado == Timer.EstadoTimer.Rojo && timer.Estado == Timer.EstadoTimer.Apagado)
+                    {
+                        Verde.color = Color.black;
+                        Amarillo.color = Color.black;
+                        Rojo.color = Color.black;
+                    }
+                    else
+                    {
+                        Verde.color = Color.black;
+                        Amarillo.color = Color.black;
+                        Rojo.color = Color.red;
+                    }
+
+                    if(timer.Estado != Timer.EstadoTimer.Apagado)
+                        UltimoEstado = timer.Estado;
                 }
                 break;
 
